@@ -1,11 +1,11 @@
 <?php
 
-//require_once("../utils.php"); // uncomment for fix
+require_once("../utils.php"); // uncomment for fix
 
 if( isset( $_POST[ 'Submit' ]  ) ) {
 	// Get input
-	$target = $_REQUEST[ 'ip' ]; // function update
-//	$target = simple_sanitize($_REQUEST[ 'ip' ]); // uncomment for fix
+//	$target = $_REQUEST[ 'ip' ]; // function update
+	$target = simple_sanitize($_REQUEST[ 'ip' ]);
 
 	// Determine OS and execute the ping command.
 	if( stristr( php_uname( 's' ), 'Windows NT' ) ) {
