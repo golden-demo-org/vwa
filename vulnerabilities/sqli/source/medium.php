@@ -1,8 +1,11 @@
 <?php
 
+require_once("../utils.php");
+
 if( isset( $_POST[ 'Submit' ] ) ) {
 	// Get input
-	$id = $_POST[ 'id' ];
+//	$id = $_POST[ 'id' ];
+	$id = clean_input($_REQUEST[ 'id' ]);
 
 	$id = mysqli_real_escape_string($GLOBALS["___mysqli_ston"], $id);
 
