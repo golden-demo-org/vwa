@@ -1,8 +1,11 @@
 <?php
 
+require_once("../utils.php");
+
 if( isset( $_REQUEST[ 'Submit' ] ) ) {
 	// Get input
-	$id = $_REQUEST[ 'id' ];
+//	$id = $_REQUEST[ 'id' ];
+	$id = clean_input($_REQUEST[ 'id' ]);
 
 	switch ($_DVWA['SQLI_DB']) {
 		case MYSQL:
