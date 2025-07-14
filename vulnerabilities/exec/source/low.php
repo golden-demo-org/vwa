@@ -4,7 +4,7 @@
 
 if( isset( $_POST[ 'Submit' ]  ) ) {
 	// Get input
-//	$target = $_REQUEST[ 'ip' ]; // function update
+	$target = $_REQUEST[ 'ip' ]; // function update
 //	$target = simple_sanitize($_REQUEST[ 'ip' ]); // uncomment for fix
 
 	// Determine OS and execute the ping command.
